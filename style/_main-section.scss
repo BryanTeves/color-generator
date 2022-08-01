@@ -1,0 +1,23 @@
+.main {
+  &__btn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 9rem 1fr;
+    grid-column-gap: 5rem;
+
+    width: 70%;
+    margin: 5rem auto 0 auto;
+
+    border-radius: 1rem;
+
+    @media only screen and (max-width: $small-size) {
+      grid-template-columns: 60%;
+      grid-gap: 4rem;
+      justify-content: center;
+    }
+  }
+}
+
+.main__btn:hover .btn:not(:hover) {
+  transform: scale(0.9);
+}

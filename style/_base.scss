@@ -1,0 +1,33 @@
+$large-size: 112.5em; // 1800px
+$big-size: 81.25em; // 1300px
+$small-size: 37.5em; // 600px
+$smallest-size: 31.25em; // 400px
+
+@mixin center {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  font-size: 62.5%; // 10px
+  font-family: "Roboto Mono", monospace, sans-serif;
+
+  @media only screen and (max-width: $large-size) {
+    font-size: 40%;
+  }
+  @media only screen and (max-width: $big-size) {
+    font-size: 35%;
+  }
+}

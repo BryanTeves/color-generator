@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/main.scss" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,200&display=swap" rel="stylesheet">
+    <script defer src="script/main.js"></script>
+
+    <title>Color generator - gerador de cores</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <h1 class="header__content--h1">Gerador de cores</h1>
+      </div>
+      <div class="header__content--social">  
+          <a target="_blank" href="https://www.linkedin.com/in/bryan-teves-freitas-6674ba233/" class="fa fa-linkedin"></a>
+          <a target="_blank" href="https://github.com/BryanTeves" class="fa fa-github"></a> 
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__btn">
+        <button class="btn btn--1" data-btn="1">Gerar cores</button>
+        <button class="btn btn--2" data-btn="2">Ver minha cor</button>
+        <button class="btn btn--3" data-btn="3">Recomeçar</button>
+      </div>
+
+      <div class="color"></div>
+
+      <div class="create-color"></div>
+
+      <div class="copy hidden">Código de cor copiada</div>
+    </main>
+    <footer class="footer">&copy; Feito por Bryan Teves - 2022</footer>
+    <div class="overlay display"></div>
+
+    <div class="user-color hidden">
+      <form class="user-color__form">
+        <input type="text" id="user" class="user-color__input" required />
+        <label for="user" class="user-color__label"
+          >Escreva o código da sua cor!</label
+        >
+        <p class="user-color__p">
+          Coloque ela em algum dos formatos: #fff, #f1f1f1, rgb(255,255,255)
+          rgba(255,255,255,1), white. 
+          </p>
+        </p>
+        <input type="submit" value="enviar" class="user-color__btn btn" data-btn="4"/>
+      </form>
+      <button class="user-color__close--btn btn" data-btn="5">&#x2716;</button>
+    </div>
+    
+  </body>
+
+</html>

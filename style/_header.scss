@@ -1,0 +1,39 @@
+.header {
+  padding: 7rem;
+  text-align: center;
+  @media only screen and (max-width: $small-size) {
+    padding: 5rem;
+  }
+
+  &__content {
+    display: grid;
+    justify-content: center;
+    padding: 4rem;
+
+    &::after,
+    ::before {
+      content: "";
+      width: 20rem;
+      height: 1px;
+      border: 1px solid black;
+      margin: 0.8rem;
+
+      @media only screen and (max-width: $smallest-size) {
+        display: none;
+      }
+    }
+
+    &--h1 {
+      font-size: 4.5rem;
+      letter-spacing: 1rem;
+      text-transform: uppercase;
+    }
+
+    &--social {
+      font-size: 2rem;
+      padding: 1rem;
+      text-align: end;
+      margin-right: 2rem;
+    }
+  }
+}

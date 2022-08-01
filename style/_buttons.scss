@@ -1,0 +1,31 @@
+.btn {
+  border-radius: 5rem;
+  border: none;
+  padding: 3.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  box-shadow: 0 1rem 2rem rgba(black, 0.4);
+  transition: transform 0.2s;
+  font-size: 1.8rem;
+  font-family: inherit;
+
+  &--1 {
+    animation: color-back 6s infinite linear;
+  }
+  &--2 {
+    animation: color-back 4s infinite;
+  }
+  &--3 {
+    animation: color-back 2s infinite;
+  }
+
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
+  &:active {
+    animation-play-state: paused;
+    box-shadow: 0 1rem 6rem rgba(black, 0.4);
+    transform: translateY(1rem);
+  }
+}

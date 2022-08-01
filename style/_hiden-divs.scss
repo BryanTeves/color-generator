@@ -1,0 +1,89 @@
+.copy {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(green, 0.4),
+    rgba(green, 0.6)
+  );
+  color: white;
+  width: 25%;
+  height: 15vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  border-radius: 4rem;
+  padding: 4rem;
+
+  @include center;
+
+  @media only screen and (max-width: $big-size) {
+    width: 40%;
+    font-size: 4rem;
+  }
+  @media only screen and (max-width: $small-size) {
+    width: 40%;
+    font-size: 3rem;
+  }
+}
+
+.user-color {
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
+
+  background-image: linear-gradient(to right, aqua, red);
+
+  border-radius: 2.5rem;
+
+  @include center;
+
+  &__form {
+    display: grid;
+    grid-gap: 2.8rem;
+    justify-content: center;
+    justify-items: center;
+
+    padding: 10rem;
+
+    @media only screen and (max-width: $small-size) {
+      padding: 3rem;
+    }
+  }
+
+  &__input {
+    width: 20vw;
+    height: 3rem;
+    border-radius: 15rem;
+    border: 1px solid black;
+    padding: 2rem;
+    box-shadow: 0 1rem 4rem rgba(black, 0.4);
+  }
+  &__label {
+  }
+  &__p {
+  }
+  &__btn {
+    width: 15rem;
+    animation: color-back 2s infinite;
+  }
+
+  &__close--btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 4rem;
+    border: none;
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: black;
+
+    @media only screen and (max-width: $small-size) {
+      margin: 2rem;
+    }
+  }
+}

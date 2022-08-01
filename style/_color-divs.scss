@@ -1,0 +1,83 @@
+.color {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-auto-rows: 18rem;
+  grid-gap: 2rem;
+
+  background-color: rgba(black, 0.1);
+  padding: 5rem;
+  margin: 15rem auto auto auto;
+  width: 60%;
+  border-radius: 100px;
+
+  @media only screen and (max-width: $small-size) {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 2fr));
+    grid-template-rows: repeat(auto-fit, minmax(14rem, 2fr));
+    grid-auto-rows: 14rem;
+
+    padding: 7rem;
+  }
+
+  &__content {
+    border-radius: 50%;
+    transition: all 0.2s;
+    position: relative;
+    border: 1px solid black;
+
+    &--user {
+      border-radius: 10px;
+    }
+
+    &::after {
+      content: "Clique para copiar";
+      display: block;
+      font-size: 2.2rem;
+      padding: 3rem;
+      color: white;
+      text-align: center;
+
+      visibility: hidden;
+      opacity: 0;
+
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      transition: all 0.2s;
+    }
+
+    &:hover::after {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:hover {
+      filter: brightness(0.9);
+      transform: scale(1.1);
+      box-shadow: 0 2rem 4rem rgba(black, 0.1);
+    }
+  }
+}
+
+.create-color {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-auto-rows: 12rem;
+  grid-gap: 2rem;
+  justify-content: center;
+
+  background-color: rgba(black, 0.1);
+  padding: 6.5rem 7rem;
+  margin: 10rem auto auto auto;
+  width: 10%;
+  border-radius: 10rem;
+
+  @media only screen and (max-width: $big-size) {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
+    grid-template-rows: repeat(auto-fit, minmax(10rem, 2fr));
+    grid-auto-rows: 10rem;
+    padding: 6.5rem 9rem;
+  }
+}
